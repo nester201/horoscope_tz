@@ -9,4 +9,5 @@
 
 .username {
     margin-left: auto;
+    color: var(--tg-theme-text-color);
 }

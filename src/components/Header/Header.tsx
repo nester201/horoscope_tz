@@ -4,12 +4,12 @@ import Button from '../Button/Button';
 import { useInitialContext } from '../../hooks/useInitialComtext';
 
 const Header = () => {
-  const { currentLanguage } = useInitialContext();
+  const { currentLanguage, currentUser } = useInitialContext();
 
   return (
     <div className={'header'}>
       <Button text={'Button'} onClick={() => {}} />
-      <span className={'username'}>{''}</span>
+      <span className={'username'}>{currentUser?.username}</span>
       <div>{currentLanguage}</div>
     </div>
   );
