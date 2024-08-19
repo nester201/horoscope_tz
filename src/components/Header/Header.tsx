@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className={'header'}>
-      <Button text={''} onClick={() => {}} />
+      <Button text={'Button'} onClick={() => {}} />
       <span className={'username'}>{user?.username}</span>
       <div>{currentLanguage}</div>
     </div>

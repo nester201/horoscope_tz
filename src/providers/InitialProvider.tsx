@@ -9,7 +9,7 @@ export const InitialProvider: FC<PropsWithChildren> = ({ children }) => {
   const { user } = useTelegram();
 
   useEffect(() => {
-    if (user?.language_code) {
+    if (user && user.language_code) {
       setCurrentLanguage(user.language_code);
     }
   }, []);
