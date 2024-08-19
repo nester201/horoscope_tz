@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-const webAppUrl = 'https://66c35d017e3b0510a28fe178--venerable-panda-19ca5a.netlify.app';
+const webAppUrl = 'https://66c36eb53ada3200088c5d07--venerable-panda-19ca5a.netlify.app';
 
 const token = '7481817295:AAHhcNRXfQ3pFrvoZI7z93TlBeFnwNn5biU';
 

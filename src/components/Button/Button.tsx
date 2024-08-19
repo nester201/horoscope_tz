@@ -7,7 +7,7 @@ type Props = {
   className?: string;
 };
 
-const Button: FC<Props> = ({ onClick, text, className }) => {
+const Button: FC<Props> = ({ onClick, text, className = '' }) => {
   return (
     <button onClick={onClick} className={'button' + className}>
       {text}

@@ -15,7 +15,10 @@ export const InitialProvider: FC<PropsWithChildren> = ({ children }) => {
     }
   }, []);
 
-  const value = useMemo(() => ({ currentLanguage, setCurrentLanguage }), [currentLanguage, setCurrentLanguage]);
+  const value = useMemo(
+    () => ({ currentLanguage, setCurrentLanguage, currentUser }),
+    [currentLanguage, setCurrentLanguage, currentUser]
+  );
 
   return <InitialContext.Provider value={value}>{children}</InitialContext.Provider>;
 };
