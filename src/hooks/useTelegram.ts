@@ -6,5 +6,5 @@ export const useTelegram = () => {
     tg.close();
   }, []);
 
-  return useMemo(() => ({ tg, onClose, user: tg.initDataUnsafe?.user }), [onClose]);
+  return useMemo(() => ({ tg, onClose }), [onClose]);
 };

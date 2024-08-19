@@ -1,16 +1,17 @@
 import { createContext, FC, PropsWithChildren, useEffect, useMemo, useState } from 'react';
 import { IInitialProvider } from '../interfaces/IInitialProvider';
-import { useTelegram } from '../hooks/useTelegram';
+
+const tg = window?.Telegram.WebApp;
 
 export const InitialContext = createContext({} as IInitialProvider);
 
 export const InitialProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<string>('');
-  const { user } = useTelegram();
+  const [currentUser, setCurrentUser] = useState<WebAppUser | null>(null);
+  const [currentLanguage, setCurrentLanguage] = useState<string>(currentUser?.language_code || '');
 
   useEffect(() => {
-    if (user && user.language_code) {
-      setCurrentLanguage(user.language_code);
+    if (tg.initDataUnsafe.user) {
+      setCurrentUser(tg.initDataUnsafe.user);
     }
   }, []);
 
