@@ -1,4 +1,4 @@
-import TelegramBot from 'node-telegram-bot-api';
+const TelegramBot = require('node-telegram-bot-api');
 
 const token = '7481817295:AAHhcNRXfQ3pFrvoZI7z93TlBeFnwNn5biU';
 
